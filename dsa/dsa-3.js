@@ -160,3 +160,83 @@
 //     }
 //     return str.join('');
 // }
+// // Given a arr ing s, reverse only all the vowels in the arr ing and return it.
+
+// // The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once. 
+// // Harshul Srivastava
+// // 15:06
+// // I/P: Elephant 
+// // Harshul Srivastava
+// // 15:06
+// // O/P: alephEnt 
+
+// function rVowel(str ){
+//   let vowels = ["a","e","i","o","u","E"]
+//   let arr = str.split("")
+//     let start = 0;
+//     let end = arr.length-1;
+//     while(start<end){
+
+//         if (vowels.includes(arr[start]) && vowels.includes(arr[end]) ){
+
+//             [arr[start], arr[end]] = [arr[end], arr[start]]
+//             // let temp = arr[start];
+//             // arr[start]=arr[end];
+//             // arr[end] = temp;
+//             start++;
+//             end--;
+//         }
+//         else if(!vowels.includes(arr[start])){
+//                  start++;
+//         }
+//         else if(!vowels.includes(arr[end])){
+//             end--;
+//         }
+//         else{
+//             start++;
+//             end--;
+//         }
+
+//     }
+//     return arr.join("") ;
+
+// }
+// console.log(rVowel( "Elephant "))
+
+
+
+// Q2-Given a string array 'words', return *the* maximum value of 'length(word[i]) * length(word[j])' 
+// where the two words do not share common letters. If no such two words exist, return '0'. 
+
+// Input: words = ["abcw","baz","foo","bar","xtfn","abcdef"]
+// Output: 16
+// Explanation: The two words can be "abcw", "xtfn". 
+
+function subs(words) {
+    let out = 0;
+    for (let i = 0; i < words.length; i++) {
+
+        // let subarr= words[i].split("")
+
+        for (let j = i + 1; j < words.length; j++) {
+            let flag = false;
+            if (words[i].length * words[j].length > out) {
+                for (let k = 0; k < words[i].length; k++) {
+                    if (words[j].includes(words[i][k])) {
+                        flag = false;
+                        break;
+                    }
+                    
+                    flag = true;
+
+                }
+            }
+            if(flag === true){
+                out = words[i].length * words[j].length
+            }
+        }
+    }
+    return out
+}
+
+console.log(subs(["abcw", "baz", "foo", "bar", "xtfn", "abcdef"]))

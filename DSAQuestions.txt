@@ -1,0 +1,31 @@
+Q1. Given a string s, reverse only all the vowels in the string and return it.
+
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+
+
+Q2. Given a string 's' consisting of words and spaces, return the length of the **last** word in the string.
+
+A **word** is a maximal substring consisting of non-space characters only.
+
+
+Q3. Given an integer array 'nums', return *the **third distinct maximum** number in this array. If the third maximum does not exist, return the **maximum** number*.
+
+Q4. Given a string s, reverse only all the vowels in the string and return it.
+
+The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+
+Q5. Given an array of integers arr, find the sum of 'min(b)', where 'b' ranges over every (contiguous) subarray of 'arr'.
+ Since the answer may be large, return the answer **modulo** '109 + 7'.
+
+Q6. Given a string array 'words', return *the* maximum value of 'length(word[i]) * length(word[j])' where the two words do not share common letters. If no such two words exist, return '0'.
+
+Q7. Given a list of non-negative integers 'nums', arrange them such that they form the largest number and return it.
+
+Q8. 4. Minimum Size SubArray Sum Coding O REJECTEDGiven an array of positive integers nums and a positive
+integer target, return the minimal length of a subarray whose sum is greater than or equal totarget. If there is no such
+subarray, returneinstead.Example 1:
+
+Input: target= 7, nums [2,3,1,2,4,3]
+Output: 2
+Explanation: The subarray [4,3] has the minimal
+length under the problem constraint.
